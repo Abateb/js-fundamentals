@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* debugging */
+  border: 1px solid green;
+
+  /* global font */
+  font-family: monospace;
+}
