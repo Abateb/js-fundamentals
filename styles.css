@@ -9,3 +9,22 @@
   /* global font */
   font-family: monospace;
 }
+
+body {
+  background-color: #454545;
+  overflow: hidden;
+}
+
+p {
+  color: white;
+  font-size: 1.3em;
+}
+
+
+button {
+  outline: none;
+  background-color: blanchedalmond;
+  color: black;
+  font-size: 1.3em;
+
+}
