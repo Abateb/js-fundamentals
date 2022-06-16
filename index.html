@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JS Fundamentals Quiz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./stylesPRI.css">
+  <link rel="stylesheet" href="./stylesSEC.css">
+
 </head>
+
 <body>
-  <!-- main outter div -->
-  <div class="outer-container ">
+  <!-- primary content wrapper -->
+  <div class="abs-max-height">
 
-    <!-- top nav bar section -->
+    <!-- timer & highscore div -->
     <div class="top-bar">
-      <button> View Highscore</button>
+      <div id="top-bar-info">
+      <button class="red-nav-button"> View Highscore</button>
       <p>Timer 00:00</p>
-
+      </div>
     </div>
 
-      <!-- inner div -->
+      <!-- secondary content wrapper for centering -->
 
-      <div class="inner-container">
+      <div class="horizontal-center vertical-center rel-max-height">
 
         <!-- quiz intro/ main header -->
-        <header class="quiz-intro">
-          <h1></h1>
+        <header id="intro-screen" class="large-padding">
 
+          <h1>Welcome to JS-Fundamentals Quiz</h1>
+          <div>
+            <p>Welcome to the JavaScript code quiz! Here you will be prompted with several questions related to JavaScript programming. To get started, click "Lets Go!" below.</p>
+
+            <button class="start-quiz-button red-nav-button" id="start-quiz-button">Lets Go!</button>
+          </div>
 
         </header>
 
-        <main>
-          <!-- main quiz content -->
+        <!-- main quiz content -->
+      <main>
+          <!-- ---------- ------------------>
+          <!-- 2nd phase: Question screen -->
+          <!-- -------------------------- -->
+          <section aria-labelledby="question-title" id="question-screen" class="question-screen medium-padding">
+          <h2 id="question-title" class="question-title"></h2>
+          <ul>
 
-        </main>
+            <!-- generate answer buttons here -->
+          </ul>
+          <footer id="question-feedback" class="question-feedback">
+            <p>your answer is wrong</p>
+          </footer>
+        </section>
+
+        <!-- --------------------------------- -->
+        <!-- third phase: Quiz finished screen -->
+        <!-- --------------------------------- -->
+
+        <section  aria-labelledby="quiz-complete-title" id="finish-screen">
+          <h2 id="quiz-complete-title">Quiz Complete!</h2>
+          <p>Your final score : 0</p>
+          <div id="score-entry" class="score-entry">
+            <label for="">Enter initials:</label>
+            <input type="text" placeholder="Initials Go Here">
+            <button class="red-nav-button" ></button>
+          </div>
+        </section>
+
+        <!-- ------------------------------ -->
+        <!-- Fourth Phase: HIGHSCORE Screen -->
+        <!-- ------------------------------ -->
+
+        <section aria-labelledby="highscore-title" id="highscore-screen" class="highscore-screen">
+          <h2 id="highscore-title">Highscores:</h2>
+
+          <ol>
+            <!-- Generate highscore labeles here -->
+          </ol>
+          <button id="go-back-btn">Go back</button>
+          <button id="clear-scores-btn" class="red-nav-button">Clear scores</button>
+        </section>
+      </main>
+
+      <!-- close secondary content wrapper -->
       </div>
 
 
-
+<!-- close primary content wrapper -->
 
 </div>
 
 
 
 
-  <script src="./quiz.js"></script>
+  <script type="module" src="./quiz.js"></script>
 </body>
 </html>

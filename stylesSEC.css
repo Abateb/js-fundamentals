@@ -1,0 +1,328 @@
+:root {
+  --theme-body-background-color: #1e1e1e;
+}
+
+body {
+  background-color: var(--theme-body-background-color);
+  height: 100vh;
+  overflow: hidden;
+}
+
+button {
+  font-weight: 900;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto calc(15vh + 50px) auto;
+  background-color: darkolivegreen;
+  border-radius: 10px;
+  box-shadow: 0 0 40px black;
+  padding: 20px;
+}
+
+/* --------------- */
+/* Utility Classes */
+/* --------------- */
+
+.red-nav-button {
+  background-color: brown;
+  box-shadow: 0 0 5px black;
+  transition: background-color 0.25s;
+}
+
+.red-nav-button:hover {
+  background-color: beige;
+}
+
+.horizontal-center {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.abs-max-height {
+  height: 100%;
+}
+
+.rel-max-height {
+  height: 100vh;
+}
+
+.half-height {
+  height: 50%;
+}
+
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.small-padding {
+  padding: 5px;
+}
+
+.large-padding {
+  padding:25px
+}
+
+/* ----------------------- */
+/* Timer / View Highscores */
+/* ----------------------- */
+
+.top-bar {
+  width: 100%;
+  padding: 20px 20px 10px;
+}
+
+.top-bar div {
+  display: flex;   /* toggle dispay to flex  */
+  justify-content:space-between;
+  height: 100%;
+}
+
+/* view highscores button */
+.top-bar button {
+  height: 100%;
+  margin: 0;
+  font-size: 1.1em;
+  border-radius: 15px;
+  background-color: #995454;
+}
+
+/* timer */
+
+.top-bar p {
+  letter-spacing: 2px;
+  font-weight: 600;
+  height: 100%;
+  background-color: purple;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px whitesmoke;
+}
+
+/* ----------------- */
+/* Quiz Intro Screen */
+/* ----------------- */
+
+
+/* quiz intro */
+
+header div {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* quiz intro description */
+
+header p {
+  font-size: 1.2em;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+/* quiz intro heading */
+
+h1 {
+  letter-spacing: 1px;
+  padding-bottom: 25px;
+  color: beige;
+  font-family: cursive;
+}
+
+.start-quiz-button {
+  margin: 25px auto 0 auto;
+  font-weight: 900;
+  padding: 10px 15px;
+}
+
+/* --------------------- */
+/* Question Card Section */
+/* --------------------- */
+
+.question-screen {
+  display: none;
+}
+
+/* question title & subtitles */
+.question-title, .question-title span {
+  color: #cbcf92;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* question title underline */
+.question-title::after {
+  content:"";
+  width: 80%;
+  margin: 0 auto;
+  background-color: #4c4c4c;
+  position: absolute;
+  left: 10%;
+  bottom: -10px;
+  height: 2px;
+  border-radius: 2px;
+  box-shadow: 0 0 3px #454545;
+}
+
+/* list item that contains the answer buttons */
+.question-screen li {
+  padding: 5px;
+  width: 50%;
+  min-height: 3em;
+  transition: width 0.25s;
+  word-break: break-all;
+}
+
+.question-screen li:hover {
+  width: 60%;
+}
+
+/* the answer buttons container */
+.question-screen ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* the answer buttons */
+.question-screen button {
+  text-align: left;
+  /* width: 50%; */
+  width: 100%;
+  height: 100%;
+  color: #dbdbdb;
+  box-shadow: 0 0 5px #000000;
+  background-color: #121212;
+  transition: background-color 0.25s;
+}
+
+.question-screen button:hover {
+  background-color: #1e1e1e;
+}
+
+.question-feedback {
+  margin-top: 25px;
+}
+
+.question-feedback p {
+  font-family: system-ui;
+  font-weight: 900;
+  color: #9c9c9c;
+  font-size: 1.2em;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* ------------------- */
+/* Finish Quiz Section */
+/* ------------------- */
+
+.finish-screen {
+  display: none;
+}
+
+.finish-screen h2 {
+  font-family: cursive;
+  color: #fff5a6;
+  margin-bottom: 5px;
+}
+
+.finish-screen p {
+  font-family: cursive;
+  font-size: 1.1em;
+}
+
+.score-entry label {
+  height: 50%;
+  flex: 1;
+  margin-bottom: 5px;
+  font-family: cursive;
+}
+
+.score-entry button {
+  /* background-color: #7a8c91;
+  transition: background-color 0.25s; */
+  flex: 1;
+  font-size: 1.1em;
+  padding: 5px;
+}
+
+/* .score-entry button:hover {
+  background-color: #9aaeb4;
+} */
+
+.score-entry input {
+  margin-left: 15px;
+  margin-right: 15px;
+  flex: 1;
+  min-width: 50px;
+}
+
+.score-entry {
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ------------------ */
+/* Highscores Section */
+/* ------------------ */
+
+.highscores-screen {
+  display: none;
+}
+
+.highscores-screen h2 {
+  font-family: cursive;
+  color: #fff5a6;
+  margin-bottom: 15px;
+}
+
+.highscores-screen ol {
+  color: white;
+  font-family: monospace;
+  font-size: 1.4em;
+  padding: 5px;
+  font-weight: 900;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+  background-color: #272727;
+  box-shadow: 0 0 10px black;
+  max-height: 60vh;
+  min-height: 20px;
+}
+
+.highscores-screen button {
+  display: inline;
+  margin-right: 10px;
+  box-shadow: 0 0 10px black;
+}
+
+.highscores-screen ol li {
+  padding: 5px;
+  background-color: #555555;
+}
+
+.highscores-screen ol li:nth-child(2n) {
+  background-color: #454545;
+}
+
+/* ------------- */
+/* Media Queries */
+/* ------------- */
+
+@media screen and (max-width: 813px) {
+
+  .horizontal-center {
+      width: 80%;
+  }
+
+}
